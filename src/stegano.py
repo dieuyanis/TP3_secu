@@ -1,5 +1,10 @@
 from PIL import Image
 import argparse
+import os
+
+# Vérifier et créer les dossiers input et output
+os.makedirs("src/input", exist_ok=True)
+os.makedirs("src/output", exist_ok=True)
 
 def hide_message(input_image_path, output_image_path, message):
     print(f"Chargement de l'image depuis {input_image_path}")
