@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "tp3-secu"
+version = "0.1.0"
+description = "Projet TP 3 du cours Sec Web et Réseaux à l'UQAC en décembre 2024"
+authors = ["rémi_va <rvachalde@etu.uqac.ca>, yanis <ynury@etu.uqac.ca>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pillow = "^11.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
