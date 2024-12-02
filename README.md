@@ -1,6 +1,14 @@
 # TP3 - Sécurité Web et Réseaux : Stéganographie d'Image
 
+## Auteurs
+- **Code permanent** : VACR21030400, **Nom** : VACHALDE, **Prénom** : Rémi
+- **Code permanent** : ______, **Nom** : NURY, **Prénom** : Yanis
+
+---
+
+## Description
 Ce projet implémente une application en ligne de commande (CLI) permettant de cacher et de révéler des messages secrets dans des images, en utilisant la stéganographie. Voici un guide détaillé pour installer, configurer et utiliser ce projet.
+
 
 ---
 
