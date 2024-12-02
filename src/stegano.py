@@ -15,7 +15,7 @@ def hide_message(input_image_path, output_image_path, message):
     pixels = encoded_image.load()
 
     # Convertir le message en binaire et ajouter un marqueur de fin
-    binary_message = ''.join(format(ord(char), '08b') for char in message) + '1111111111111110'
+    binary_message = ''.join(format(ord(char), '08b') for char in message) + '11111110'
     print(f"Message binaire : {binary_message}")
     message_index = 0
 
