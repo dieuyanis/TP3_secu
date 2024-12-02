@@ -139,7 +139,7 @@ tp3-steganographie/
 1. Ajoutez une image source dans le dossier `src/input/`.
 2. Exécutez la commande :
    ```bash
-   poetry run python src/stegano.py hide src/input/cap1.png src/output/encoded_image.png "Ceci est un message secret"
+   poetry run python src/stegano.py hide src/input/exemple_image.png src/output/encoded_image.png "Ceci est un message secret"
    ```
 3. Une nouvelle image, `encoded_image.png`, sera créée dans `src/output/`.
 
@@ -159,6 +159,7 @@ tp3-steganographie/
 3. **Limites** :
     - La taille du message dépend de la taille de l'image. Une image trop petite ne pourra pas contenir un message trop long.
     - Assurez-vous que les fichiers d'entrée et de sortie existent dans les dossiers appropriés.
+    - Seul le format PNG est accepté
 
 ---
 
@@ -172,10 +173,22 @@ tp3-steganographie/
 
 ---
 
-## **Support**
+## **Ajouts Bonus**
 
-Si vous rencontrez des problèmes ou avez des questions, veuillez ouvrir une issue sur le dépôt GitHub ou contacter le responsable du projet.
+### **1. Gestion des erreurs avancée**
+Pour améliorer l'expérience utilisateur et garantir la robustesse du programme, plusieurs mécanismes de gestion d'erreurs ont été ajoutés :
 
----
+- **Vérification de l'existence des fichiers :**
+  Si le fichier d'entrée spécifié n'existe pas, le programme affiche une erreur et arrête l'exécution.
 
-Ce fichier README est conçu pour guider un utilisateur depuis l'installation jusqu'à l'utilisation avancée du projet. 😊
+- **Validation du format du fichier :**
+  Seuls les fichiers au format `.png` sont acceptés comme entrée. Si un fichier d'un autre format est fourni, le programme refuse de continuer.
+
+### **2. Gestion des conflits avec les fichiers de sortie**
+Lors de l'écriture d'une image encodée, le programme vérifie si un fichier portant le même nom existe déjà. Si c'est le cas, l'utilisateur est invité à choisir parmi les options suivantes :
+- **Écraser le fichier existant :** L'image encodée remplace le fichier existant.
+- **Renommer le fichier de sortie :** Un nouveau nom est généré automatiquement dans le même dossier pour éviter tout conflit. Exemple : `encoded_image_1.png`, `encoded_image_2.png`, etc.
+- **Annuler l'opération :** L'utilisateur peut choisir de ne pas créer le fichier.
+
+### **3. Création automatique des dossiers**
+Si les dossiers spécifiés pour l'entrée ou la sortie (`src/input`, `src/output`) n'existent pas, le programme les crée automatiquement. Cela évite les erreurs liées à des dossiers manquants.
