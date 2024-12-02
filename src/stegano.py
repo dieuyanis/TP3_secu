@@ -33,8 +33,6 @@ def hide_message(input_image_path, output_image_path, message):
                 return
     print("L'image est trop petite pour contenir ce message.")
 
-from PIL import Image
-
 def reveal_message(encoded_image_path):
     """
     Révèle le message caché dans une image encodée.
@@ -73,8 +71,6 @@ def reveal_message(encoded_image_path):
         print("Aucun message n'a été trouvé.")
 
     return decoded_message
-
-
 
 # Exemple d'utilisation
 if __name__ == "__main__":
